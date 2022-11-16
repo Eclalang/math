@@ -4,18 +4,18 @@
  Func Name  |                  Prototype              |     Description                       |
 ----------------------------------------------------------------------------------------------|
  Add        |  Add(a int, b int) int {}               |  returns a + b                        |
- Mul        |  Multiply(a int, b int) int {}          |  reurns a * b                         |
+ Mul        |  Mul(a int, b int) int {}               |  reurns a * b                         |
  Div        |  Div(a int, b int) int {}               |  returns a / b                        |
  Mod        |  Mod(a int, b int) int {}               |  returns a % b                        |
  Sub        |  Sub(a int, b int) int {}               |  returns a - b                        |
  ---------------------------------------------------------------------------------------------|
- Pi         |  Pi() int {}                            |  returns Pi      (3.14     ...etc)    |
+ Pi         |  Pi() float {}                          |  returns Pi      (3.14     ...etc)    |
  Cos        |  Cos(adj float, hyp float) float {}     |  returns adj / hyp                    |
  Sin        |  Sin(opp float, hyp float) float {}     |  returns opp / hyp                    |
  Tan        |  Tan(opp float, adj float) float {}     |  returns opp / adj                    |
 ----------------------------------------------------------------------------------------------|
- Ln         |  Ln(nb int) int {}                      |  returns naturel logarithm of nb      |
- Exp        |  Exp(nb int) int {}                     |  returns e^nb    (exponential)        |
+ Ln         |  Ln(nb float) float {}                  |  returns naturel logarithm of nb      |
+ Exp        |  Exp(nb float) float {}                 |  returns e^nb    (exponential)        |
 ----------------------------------------------------------------------------------------------|
  Sqrt       |  Sqrt(nb int) int {}                    |  returns nb¹/²  (square root)         |
  cbrt       |  cbrt(nb int) int {}                    |  returns nb¹/³  (cubic root)          |
