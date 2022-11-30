@@ -20,7 +20,6 @@ func Tan(opp float32, adj float32) float32 {
 }
 
 func Ln(nb float64) float64 {
-	// return (((11/60)*float32(Pow(int((nb-1)), 3)) + float32(Pow(int((nb-1)), 2))) / (-0.5 + (3/2)*nb + (3/5)*float32(Pow(int(nb-1), 2)) + ((1 / 20) * float32(Pow(int(nb-1), 3)))))
 	return (math.Log(nb))
 }
 
@@ -51,40 +50,7 @@ func Sqrt(nb int) int {
 }
 
 func Cbrt(nb int) int {
-	if nb == 0 {
-		return (0)
-	}
-	if nb < 0 {
-		return (-Cbrt(-nb))
-	}
-
-	var r float32 = float32(nb)
-	var ex int = 0
-
-	for r < 0.125 {
-		r *= 8
-		ex--
-	}
-	for r > 1.0 {
-		r *= 0.125
-		ex++
-	}
-	r = (-0.46946116*r+1.072302)*r + 0.3812513
-
-	for ex < 0 {
-		r *= 0.5
-		ex++
-	}
-	for ex > 0 {
-		r *= 2
-		ex--
-	}
-	r = (2.0/3.0)*r + (1.0/3.0)*float32(nb)/(r*r)
-	r = (2.0/3.0)*r + (1.0/3.0)*float32(nb)/(r*r)
-	r = (2.0/3.0)*r + (1.0/3.0)*float32(nb)/(r*r)
-	r = (2.0/3.0)*r + (1.0/3.0)*float32(nb)/(r*r)
-
-	return (int(r))
+	return (int(math.Cbrt(float64(nb))))
 }
 
 func Pow(x int, y int) int {
