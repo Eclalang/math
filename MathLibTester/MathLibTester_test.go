@@ -4,7 +4,7 @@ import (
 	"math"
 	"testing"
 
-	"github.com/Eclalang/math/mathPackage"
+	mathPackage "github.com/Eclalang/math"
 )
 
 func TestPiFucntion(t *testing.T) {
