@@ -1,5 +1,6 @@
 ## MATH LIBRARY FOR ECLA
 
+
  Func Name  |                  Prototype              |     Description                       |
 :----------:|:---------------------------------------:|:-------------------------------------:|
  Pi         |  Pi() float {}                          |  returns Pi      (3.14     ...etc)    |
@@ -18,17 +19,18 @@
  Trunc      |  Trunc(nb float) int {}                 | returns decimal part of nb            |
  Max        |  Max(a float, b float) int {}           | returns max between a and b           |
  Min        |  Min(a float, b float) int {}           | returns min between a and b           |
-
-
-
-# Candidate functions :
-
-
-Func Name   |                 Prototype               |      Description                      |              Comments                          |
-:----------:|:---------------------------------------:|:-------------------------------------:|:----------------------------------------------:|
-Acos        |  Acos(x float) float {}                 | returns arc cos of x                  |      N/A                                       |
-Asin        |  Asin(x float) float {}                 | returns arc sin of x                  |      N/A                                       |
-Atan        |  Atan(x float) float {}                 | returns arc tan of x                  |      N/A                                       |
-Cosh        |  Cosh(x float) float {}                 | returns hyperbolic cosinus of x       |      N/A                                       |
-Sinh        |  Sinh(x float) float {}                 | returns hyperbolic sinus of x         |      N/A                                       |Tanh        |  Tanh(x float) float {}                 | returns hyperbolic tangent of x       |      N/A                                       |
-Acosh       |  Acosh(x float) float {}                | returns arc hyperbolic cosinus of x   |      N/A                                       |Asinh       |  Asinh(x float) float {}                | returns arc hyperbolic sinus of x     |      N/A                                       |Atanh       |  Atanh(x float) float {}                | returns arc hyperbolic tangent of x   |      N/A                                       |:---------------------------------------------------------------------------------------------------------------------------------------------:|
+ Log10      |  Log10(nb float) float {}               | returns base-10 logarithm of nb       |
+ Round      |  Round(nb float) float {}               | returns nb rounded to the nearest int |
+ DegreesToRadians | DegreesToRadians(deg float) float {} | returns deg converted to radians      |
+ RadiansToDegrees | RadiansToDegrees(rad float) float {} | returns rad converted to degrees      |
+ Modulo     |  Modulo(a float, b float) float {}      | returns remainder of a / b            |
+ Random     |  Random(min float, max float) float {}  | returns random number between min and max |
+ Acos       |  Acos(x float) float {}                 | returns arc cosine of x               |
+ Asin       |  Asin(x float) float {}                 | returns arc sine of x                 |
+ Atan       |  Atan(x float) float {}                 | returns arc tangent of x              |
+ Cosh       |  Cosh(x float) float {}                 | returns hyperbolic cosine of x        |
+ Sinh       |  Sinh(x float) float {}                 | returns hyperbolic sine of x          |
+ Tanh       |  Tanh(x float) float {}                 | returns hyperbolic tangent of x       |
+ Acosh      |  Acosh(x float) float {}                | returns arc hyperbolic cosine of x    |
+ Asinh      |  Asinh(x float) float {}                | returns arc hyperbolic sine of x      |
+ Atanh      |  Atanh(x float) float {}                | returns arc hyperbolic tangent of x   |

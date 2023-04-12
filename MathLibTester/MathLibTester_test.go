@@ -229,9 +229,10 @@ func TestPowFucntion(t *testing.T) {
 }
 
 func TestFactFucntion(t *testing.T) {
+	var got uint64
 	t.Log("TestFactFucntion")
 	want := mathPackage.Fact(1)
-	got := 1
+	got = 1
 	if want != got {
 		t.Errorf("want %v got %v", want, got)
 	}
@@ -406,5 +407,132 @@ func TestMinFunction(t *testing.T) {
 	got = mathPackage.Min(-63, 7)
 	if want != got {
 		t.Errorf("want %v got %v", want, got)
+	}
+}
+
+func TestAcos(t *testing.T) {
+	expected := mathPackage.Acos(0.5)
+	result := math.Acos(0.5)
+	if math.Abs(expected-result) > 1e-9 {
+		t.Errorf("Acos(0.5) returned %v, expected %v", result, expected)
+	}
+}
+
+func TestAsin(t *testing.T) {
+	expected := mathPackage.Asin(0.5)
+	result := math.Asin(0.5)
+	if math.Abs(expected-result) > 1e-9 {
+		t.Errorf("Asin(0.5) returned %v, expected %v", result, expected)
+	}
+}
+
+func TestAtan(t *testing.T) {
+	expected := mathPackage.Atan(0.5)
+	result := math.Atan(0.5)
+	if math.Abs(expected-result) > 1e-9 {
+		t.Errorf("Atan(0.5) returned %v, expected %v", result, expected)
+	}
+}
+
+func TestCosh(t *testing.T) {
+	expected := mathPackage.Cosh(0.5)
+	result := math.Cosh(0.5)
+	if math.Abs(expected-result) > 1e-9 {
+		t.Errorf("Cosh(0.5) returned %v, expected %v", result, expected)
+	}
+}
+
+func TestSinh(t *testing.T) {
+	expected := mathPackage.Sinh(0.5)
+	result := math.Sinh(0.5)
+	if math.Abs(expected-result) > 1e-9 {
+		t.Errorf("Sinh(0.5) returned %v, expected %v", result, expected)
+	}
+}
+
+func TestTanh(t *testing.T) {
+	expected := mathPackage.Tanh(0.5)
+	result := math.Tanh(0.5)
+	if math.Abs(expected-result) > 1e-9 {
+		t.Errorf("Tanh(0.5) returned %v, expected %v", result, expected)
+	}
+}
+
+func TestAcosh(t *testing.T) {
+	expected := mathPackage.Acosh(2)
+	result := math.Acosh(2)
+	if math.Abs(expected-result) > 1e-9 {
+		t.Errorf("Acosh(2) returned %v, expected %v", result, expected)
+	}
+}
+
+func TestAsinh(t *testing.T) {
+	expected := mathPackage.Asinh(2)
+	result := math.Asinh(2)
+	if math.Abs(expected-result) > 1e-9 {
+		t.Errorf("Asinh(2) returned %v, expected %v", result, expected)
+	}
+}
+
+func TestAtanh(t *testing.T) {
+	expected := mathPackage.Atanh(0.5)
+	result := math.Atanh(0.5)
+	if math.Abs(expected-result) > 1e-9 {
+		t.Errorf("Atanh(0.5) returned %v, expected %v", result, expected)
+	}
+}
+
+func TestLog10(t *testing.T) {
+	nb := 100.0
+	expected := 2.0
+	result := mathPackage.Log10(nb)
+	if result != expected {
+		t.Errorf("Log10(%v) = %v; expected %v", nb, result, expected)
+	}
+}
+
+func TestRound(t *testing.T) {
+	nb := 2.49
+	expected := 2.0
+	result := mathPackage.Round(nb)
+	if result != expected {
+		t.Errorf("Round(%v) = %v; expected %v", nb, result, expected)
+	}
+}
+
+func TestDegreesToRadians(t *testing.T) {
+	deg := 180.0
+	expected := math.Pi
+	result := mathPackage.DegreesToRadians(deg)
+	if result != expected {
+		t.Errorf("DegreesToRadians(%v) = %v; expected %v", deg, result, expected)
+	}
+}
+
+func TestRadiansToDegrees(t *testing.T) {
+	rad := math.Pi
+	expected := 180.0
+	result := mathPackage.RadiansToDegrees(rad)
+	if result != expected {
+		t.Errorf("RadiansToDegrees(%v) = %v; expected %v", rad, result, expected)
+	}
+}
+
+func TestModulo(t *testing.T) {
+	a := 5.0
+	b := 3.0
+	expected := 2.0
+	result := mathPackage.Modulo(a, b)
+	if result != expected {
+		t.Errorf("Modulo(%v, %v) = %v; expected %v", a, b, result, expected)
+	}
+}
+
+func TestRandom(t *testing.T) {
+	min := 1.0
+	max := 10.0
+	result := mathPackage.Random(min, max)
+	if result < min || result > max {
+		t.Errorf("Random(%v, %v) = %v; expected a number between %v and %v", min, max, result, min, max)
 	}
 }
