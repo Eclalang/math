@@ -1,36 +1,70 @@
-## MATH LIBRARY FOR ECLA
+# Math library
+
+## Candidate functions:
+
+|    Func Name     |               Prototype               |                         Description                         |
+|:----------------:|:-------------------------------------:|:-----------------------------------------------------------:|
+|       Abs        |         Abs(x float) float {}         |               Returns the absolute value of x               |
+|       Acos       |        Acos(x float) float {}         |                   Returns arc cosine of x                   |
+|      Acosh       |        Acosh(x float) float {}        |             Returns arc hyperbolic cosine of x              |
+|       Asin       |        Asin(x float) float {}         |                    Returns arc sine of x                    |
+|      Asinh       |        Asinh(x float) float {}        |              Returns arc hyperbolic sine of x               |
+|       Atan       |        Atan(x float) float {}         |                  Returns arc tangent of x                   |
+|      Atanh       |        Atanh(x float) float {}        |             Returns arc hyperbolic tangent of x             |
+|       Cbrt       |        Cbrt(x float) float {}         |                 Returns the cubic root of x                 |
+|       Ceil       |        Ceil(x float) float {}         |  Returns the least integer that it's bigger or equal to x   |
+|       Cos        |         Cos(x float) float {}         |                Returns adjacent / hypotenuse                |
+|       Cosh       |        Cosh(x float) float {}         |               Returns hyperbolic cosine of x                |
+| DegreesToRadians |  DegreesToRadians(x float) float {}   |            Returns x value in degrees to radians            |
+|       Exp        |         Exp(x float) float {}         |                  Returns e^x (exponential)                  |
+|       Fact       |        Fact(x float) float {}         |              Returns the factorial number of x              |
+|      Floor       |        Floor(x float) float {}        | Returns the greatest integer which is smaller or equal to x |
+|        Ln        |         Ln(x float) float {}          |             Returns the naturel logarithm of x              |
+|      Log10       |        Log10(x float) float {}        |               Returns base-10 logarithm of x                |
+|       Max        |    Max(x float, y float) float {}     |          Returns the larger number between x and y          |
+|       Min        |    Min(x float, y float) float {}     |         Returns the smaller number between x and y          |
+|      Modulo      |   Modulo(x float, y float) float {}   |                 Returns remainder of x / y                  |
+|        Pi        |             Pi() float {}             |                  Returns Pi (3.14 ...etc)                   |
+|       Pow        | Pow(x float, y float) float, error {} |                         Returns x^y                         |
+|       Pow        |  Pow(x int, y float) float, error {}  |                         Returns x^y                         |
+|       Pow        | Pow(x float, y float) float, error {} |                         Returns x^y                         |
+| RadiansToDegrees |  RadiansToDegrees(x float) float {}   |            Returns x value in radians to degrees            |
+|      Random      |   Random(x float, y float) float {}   |            Returns random number between x and y            |
+|      Round       |        Round(x float) float {}        |            Returns x rounded to the nearest int             |
+|       Sin        |         Sin(x float) float {}         |                Returns opposite / hypotenuse                |
+|       Sinh       |        Sinh(x float) float {}         |                Returns hyperbolic sine of x                 |
+|       Sqrt       |        Sqrt(x float) float {}         |                Returns the square root of x                 |
+|       Tan        |         Tan(x float) float {}         |                 Returns opposite / adjacent                 |
+|       Tanh       |        Tanh(x float) float {}         |               Returns hyperbolic tangent of x               |
+|      Trunc       |        Trunc(x float) float {}        |               Returns the integer value of x                |
 
 
- Func Name  |                  Prototype              |     Description                       |
-:----------:|:---------------------------------------:|:-------------------------------------:|
- Pi         |  Pi() float {}                          |  returns Pi      (3.14     ...etc)    |
- Cos        |  Cos(adj float, hyp float) float {}     |  returns adj / hyp                    |
- Sin        |  Sin(opp float, hyp float) float {}     |  returns opp / hyp                    |
- Tan        |  Tan(opp float, adj float) float {}     |  returns opp / adj                    |
- Ln         |  Ln(nb float) float {}                  |  returns naturel logarithm of nb      |
- Exp        |  Exp(nb float) float {}                 |  returns e^nb    (exponential)        |
- Sqrt       |  Sqrt(nb int) int {}                    |  returns nb¹/²  (square root)         |
- cbrt       |  cbrt(nb int) int {}                    |  returns nb¹/³  (cubic root)          |
- Pow        |  Pow(x int, y int) int {}               |  returns x^y                          |
- Fact       |  Fact(nb int) int {}                    |  returns nb!                          |
- Abs        |  Abs(nb int) int {}                     |  returns |ab|                         |
- Floor      |  Floor(nb float) int {}                 | returns int that it's less or eq nb   |
- Ceil       |  Ceil(nb float) int {}                  | returns int that it's bigger or eq nb |
- Trunc      |  Trunc(nb float) int {}                 | returns decimal part of nb            |
- Max        |  Max(a float, b float) int {}           | returns max between a and b           |
- Min        |  Min(a float, b float) int {}           | returns min between a and b           |
- Log10      |  Log10(nb float) float {}               | returns base-10 logarithm of nb       |
- Round      |  Round(nb float) float {}               | returns nb rounded to the nearest int |
- DegreesToRadians | DegreesToRadians(deg float) float {} | returns deg converted to radians      |
- RadiansToDegrees | RadiansToDegrees(rad float) float {} | returns rad converted to degrees      |
- Modulo     |  Modulo(a float, b float) float {}      | returns remainder of a / b            |
- Random     |  Random(min float, max float) float {}  | returns random number between min and max |
- Acos       |  Acos(x float) float {}                 | returns arc cosine of x               |
- Asin       |  Asin(x float) float {}                 | returns arc sine of x                 |
- Atan       |  Atan(x float) float {}                 | returns arc tangent of x              |
- Cosh       |  Cosh(x float) float {}                 | returns hyperbolic cosine of x        |
- Sinh       |  Sinh(x float) float {}                 | returns hyperbolic sine of x          |
- Tanh       |  Tanh(x float) float {}                 | returns hyperbolic tangent of x       |
- Acosh      |  Acosh(x float) float {}                | returns arc hyperbolic cosine of x    |
- Asinh      |  Asinh(x float) float {}                | returns arc hyperbolic sine of x      |
- Atanh      |  Atanh(x float) float {}                | returns arc hyperbolic tangent of x   |
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
