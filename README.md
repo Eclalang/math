@@ -1,5 +1,8 @@
 # Math library
 
+[![Go Report Card](https://goreportcard.com/badge/github.com/Eclalang/math)](https://goreportcard.com/report/github.com/Eclalang/math)
+[![codecov](https://codecov.io/gh/Eclalang/math/graph/badge.svg?token=YNCIYERVBO)](https://codecov.io/gh/Eclalang/math)
+
 ## Candidate functions:
 
 |    Func Name     |               Prototype               |                         Description                         |
