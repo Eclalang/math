@@ -18,25 +18,7 @@ func TestAbs(t *testing.T) {
 	if expected != got {
 		t.Errorf("mathPackage.Abs(%v), got %v expected %v", abs, got, expected)
 	}
-	abs = -1
-	expected = math.Abs(abs)
-	got = Abs(abs)
-	if expected != got {
-		t.Errorf("mathPackage.Abs(%v), got %v expected %v", abs, got, expected)
-	}
-	abs = -1
-	expected = math.Abs(abs)
-	got = Abs(abs)
-	if expected != got {
-		t.Errorf("mathPackage.Abs(%v), got %v expected %v", abs, got, expected)
-	}
-	abs = -1
-	expected = math.Abs(abs)
-	got = Abs(abs)
-	if expected != got {
-		t.Errorf("mathPackage.Abs(%v), got %v expected %v", abs, got, expected)
-	}
-	abs = -1
+	abs = 1
 	expected = math.Abs(abs)
 	got = Abs(abs)
 	if expected != got {
@@ -442,14 +424,14 @@ func TestPow(t *testing.T) {
 	if expected != got {
 		t.Errorf("mathPackage.Pow(%v, %v) got %v expected %v", x, y, got, expected)
 	}
-	x = 10.0
-	y = 3.0
-	expected = math.Pow(x, y)
-	got, _ = Pow(x, y)
+	a := 10
+	b := 3
+	expected = math.Pow(float64(a), float64(b))
+	got, _ = Pow(a, b)
 	if expected != got {
-		t.Errorf("mathPackage.Pow(%v, %v) got %v expected %v", x, y, got, expected)
+		t.Errorf("mathPackage.Pow(%v, %v) got %v expected %v", a, b, got, expected)
 	}
-	x = -8.0
+	x = -8
 	y = 7.0
 	expected = math.Pow(x, y)
 	got, _ = Pow(x, y)
@@ -462,6 +444,15 @@ func TestPow(t *testing.T) {
 	got, _ = Pow(x, y)
 	if expected != got {
 		t.Errorf("mathPackage.Pow(%v, %v) got %v expected %v", x, y, got, expected)
+	}
+	str := "a"
+	got, err := Pow(x, str)
+	if err == nil {
+		t.Errorf("mathPackage.Pow(%v, %v) got %v expected error", x, str, got)
+	}
+	got, err = Pow(str, y)
+	if err == nil {
+		t.Errorf("mathPackage.Pow(%v, %v) got %v expected error", str, y, got)
 	}
 }
 
