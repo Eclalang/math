@@ -145,7 +145,6 @@ func Pi() float64 {
 // Pow returns the value of the power of a number
 func Pow(x any, y any) (float64, error) {
 	var xFloat, yFloat float64
-	var err error
 
 	switch typeX := x.(type) {
 	case int:
@@ -162,10 +161,6 @@ func Pow(x any, y any) (float64, error) {
 	case float64:
 		yFloat = typeY
 	default:
-		return 0, fmt.Errorf("invalid type")
-	}
-
-	if err != nil {
 		return 0, fmt.Errorf("invalid type")
 	}
 
